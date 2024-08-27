@@ -2,13 +2,13 @@ package eCommerceSimulation.entities.concretes;
 
 import eCommerceSimulation.entities.abstracts.Entity;
 
-public class Product implements Entity {
+public class User implements Entity {
     private int id;
     private String lastName;
     private String firstName;
     private String email;
     private String password;
-	public Product(int id, String lastName, String firstName, String email, String password) {
+	public User(int id, String lastName, String firstName, String email, String password) {
 		super();
 		this.id = id;
 		this.lastName = lastName;
