@@ -8,6 +8,7 @@ public class User implements Entity {
     private String firstName;
     private String email;
     private String password;
+	private String user;
 	public User(int id, String lastName, String firstName, String email, String password) {
 		super();
 		this.id = id;
@@ -45,6 +46,9 @@ public class User implements Entity {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public void add(User user) {
+        		
 	}
     
 }
