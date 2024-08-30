@@ -9,6 +9,7 @@ public class User implements Entity {
     private String email;
     private String password;
 	private String user;
+	private boolean verified = false;
 	public User(int id, String lastName, String firstName, String email, String password) {
 		super();
 		this.id = id;
@@ -49,6 +50,14 @@ public class User implements Entity {
 	}
 	public void add(User user) {
         		
+	}
+	public void setVerified(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+	public boolean isVerified() {
+		// TODO Auto-generated method stub
+		return false;
 	}
     
 }

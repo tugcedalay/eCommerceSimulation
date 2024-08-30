@@ -12,7 +12,7 @@ public class HibernateUserDao implements UserDao{
 	private long idCounter = 1L;
 	
 	@Override
-	public void add(User user) {
+	public void save(User user) {
 		user.setId(idCounter++);
 		user.add(user);
 
