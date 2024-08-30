@@ -8,24 +8,34 @@ public class UserManager implements UserService {
     
 	private UserDao userDao;
 	
-	public void UserService(UserDao userDao) {
-		this.userDao = userDao;
-	}
 	
-	
-	
-	@Override
-	public void add(User user) {
+	if(!user.getEmail().matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
 		
-		}
-
-
+	}
 
 	@Override
-	public void logIn(User user) {
+	public String reqister(User user) {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
-		
 
+	@Override
+	public String verifyUser(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String loginUser(String email, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String reqisterWithGoogleAccount(String googleEmail) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 }

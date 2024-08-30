@@ -8,8 +8,8 @@ import eCommerceSimulation.dataAccess.abstracts.UserDao;
 import eCommerceSimulation.entities.concretes.User;
 
 public class HibernateUserDao implements UserDao{
-	private List<User> users = new ArrayList<User>();
-	int idCounter;
+	private List<User> users = new ArrayList<>();
+	private long idCounter = 1L;
 	
 	@Override
 	public void add(User user) {
@@ -21,21 +21,24 @@ public class HibernateUserDao implements UserDao{
 
 
 	@Override
-	public List<User> getAll() {
+	public List<User> findAll() {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void save(User user) {
-		// TODO Auto-generated method stub
-		
+		return users;
 	}
 
 	@Override
 	public Optional<User> findByEmail(String Email) {
 	
-		return Optional.empty();
+		return users.stream()
+				.filter(user -> user.getEmail().equals(Email))
+				.findFirst();
+	}
+
+
+	@Override
+	public void update(User user) {
+		users.replaceAll(u -> u.getId() == user.getId() ? user : u);
+		
 	}
     
 }

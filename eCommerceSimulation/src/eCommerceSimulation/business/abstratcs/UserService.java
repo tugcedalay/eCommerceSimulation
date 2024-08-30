@@ -3,6 +3,8 @@ package eCommerceSimulation.business.abstratcs;
 import eCommerceSimulation.entities.concretes.User;
 
 public interface UserService {
-    void add (User user);
-    void logIn(User user);
+    String reqister(User user);
+    String verifyUser(String email);
+    String loginUser(String email, String password);
+    String reqisterWithGoogleAccount(String googleEmail);
 }

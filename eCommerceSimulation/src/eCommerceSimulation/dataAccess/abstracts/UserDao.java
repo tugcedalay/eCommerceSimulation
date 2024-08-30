@@ -7,7 +7,7 @@ import eCommerceSimulation.entities.concretes.User;
 
 public interface UserDao {
     void add (User user);
-    List<User> getAll();
-    void save(User user);
+    List<User> findAll();
+    void update(User user);
     Optional<User> findByEmail(String Email);
 }

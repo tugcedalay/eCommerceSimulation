@@ -3,7 +3,7 @@ package eCommerceSimulation.entities.concretes;
 import eCommerceSimulation.entities.abstracts.Entity;
 
 public class User implements Entity {
-    private int id;
+    private long id;
     private String lastName;
     private String firstName;
     private String email;
@@ -17,11 +17,11 @@ public class User implements Entity {
 		this.email = email;
 		this.password = password;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId(long idCounter) {
+		this.id = (int) idCounter;
 	}
 	public String getLastName() {
 		return lastName;
